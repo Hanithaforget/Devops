@@ -10,8 +10,7 @@ resource "aws_instance" "server1" {
 
 resource "aws_security_group" "allow_ssh" {
   name_prefix = "allow-ssh-"
-  vpc_id      = aws_vpc.main.id # Ensure `aws_vpc.main` is defined
-
+ 
   ingress {
     from_port   = 22
     to_port     = 22
@@ -31,9 +30,3 @@ resource "aws_security_group" "allow_ssh" {
   }
 }
 
-resource "aws_vpc" "main" {
-  cidr_block = "10.0.0.0/16"
-  tags = {
-    Name = "main-vpc"
-  }
-}
