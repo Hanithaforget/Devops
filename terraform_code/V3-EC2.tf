@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "server1" {
-  ami = "ami-012967cc5a8c9f891"
+  ami = "ami-005fc0f236362e99f"
   instance_type = "t2.micro"
   key_name = "us-east-key"
   //security_groups = [dpw-sg]
